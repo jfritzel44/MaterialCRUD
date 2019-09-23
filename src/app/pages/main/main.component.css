@@ -1,0 +1,43 @@
+#user-table {
+    align-self: center;
+    width: 100%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.page-container {
+    width: 70%;
+    align-self: center;
+}
+
+.avatar {
+    width: 50px;
+}
+
+#btn-bottom-container {
+    align-self: flex-end;
+}
+
+#btn-add-user {
+    margin-right: 15px;
+}
+
+#loading-card {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+::ng-deep .mat-row {
+    cursor: pointer !important;
+}

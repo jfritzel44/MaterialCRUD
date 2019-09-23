@@ -1,0 +1,47 @@
+
+<div class="container">
+    <div class="flex-container">
+        <table id="user-table" mat-table [dataSource]="users" class="mat-elevation-z8">
+            <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ID </th>
+                <td mat-cell *matCellDef="let user" (click)="$event.stopPropagation()">
+                    <mat-checkbox color="primary" [checked]="user.isChecked" (change)="checkUser(user, $event)">
+                        {{user.id}}
+                    </mat-checkbox>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="email">
+                <th mat-header-cell *matHeaderCellDef> Email </th>
+                <td mat-cell *matCellDef="let user"> {{user.email}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Name </th>
+                <td mat-cell *matCellDef="let user"> {{user.first_name}} {{user.last_name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="avatar">
+                <th mat-header-cell *matHeaderCellDef> Avatar </th>
+                <td mat-cell *matCellDef="let user"><img class="avatar" src="{{user.avatar}}"></td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="goToDetails(row)"></tr>
+        </table>
+
+        <div id="btn-bottom-container" class="flex-end mt-1">
+            <button id="btn-add-user" mat-raised-button (click)="addUser()">Add User</button>
+            <button id="btn-edit-user" mat-raised-button color="accent" (click)="editUser()">Edit User</button>
+        </div>   
+    </div>
+</div>
+
+<mat-card *ngIf="loading" class="loading-card">
+    <mat-progress-spinner 
+        color="primary" 
+        mode="indeterminate">
+    </mat-progress-spinner>
+</mat-card>

@@ -1,0 +1,48 @@
+.title {
+    font-weight: 500;
+    color: #393333;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+
+#user-card {
+    width: 500px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.page-container {
+    width: 70%;
+    align-self: center;
+}
+
+
+label {
+    margin-bottom: 0px;
+    color: #495057;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.custom-form-group {
+    padding: 10px;
+}
+
+.custom-display-box {
+    background-color: #f7f7f7;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    color: #495057;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0.375rem 0.75rem;
+}

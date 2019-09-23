@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+
+/
+
+/* Flex */
+
+.container {
+    width: 100%;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+/* Margins */
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mt-4 {
+    margin-top: 4rem;
+}
+
+.mr-1 {
+    margin-right: 1rem;
+}
+
+.mr-2 {
+    margin-right: 2rem;
+}
+
+.mr-3 {
+    margin-right: 2rem;
+}
